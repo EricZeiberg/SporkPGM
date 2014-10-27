@@ -1,7 +1,7 @@
 SporkPGM
 ========
 
-ParaPGM - RELOADED! 
+Since Para is busy with other stuff, I though I would update SporkPGM and give it a few new features. 
 
 
 How to set this thing up
