@@ -1,0 +1,17 @@
+# SporkPGM default config
+
+settings:
+  maps:
+    repository: 'maps/'
+    startup: all
+    load:
+    - map
+    - map
+    - map
+  rotation:
+    file: rotation.txt
+  match:
+    prefix: match-
+  referees:
+  - ParaPenguin
+  - ShinyDialga45

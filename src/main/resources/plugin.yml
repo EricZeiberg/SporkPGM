@@ -1,0 +1,6 @@
+name: ${plugin.name}
+description: ${project.description}
+main: ${plugin.mainClass}
+version: ${project.version}
+authors: [AthenaMC, ParaPenguin, msalihov, RainoBoy97, MasterEjzz]
+prefix: Spork
