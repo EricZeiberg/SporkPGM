@@ -34,6 +34,10 @@ public class MatchCommands {
 
 		SporkMap map = RotationSlot.getRotation().getCurrent();
 		SporkPlayer player = SporkPlayer.getPlayer((Player) sender);
+        if (map.hasEnded()){
+            sender.sendMessage(ChatColor.RED + "The match has ended. Please wait for the server to cycle");
+            return;
+        }
 		if(cmd.argsLength() == 1) {
 			List<SporkTeam> teams = map.getTeams(cmd.getString(0));
 			if(teams.size() > 1) {
