@@ -93,7 +93,7 @@ public class CoreObjective extends ObjectiveModule implements InitModule {
 		BlockState old = event.getOldState();
 		BlockState now = event.getNewState();
 		if(!Liquid.matches(liquid, old.getType()) && !Liquid.matches(liquid, now.getType())) {
-			Log.info(liquid.name() + " doesn't match " + old.getType().name() + " or " + now.getType().name());
+			//Log.info(liquid.name() + " doesn't match " + old.getType().name() + " or " + now.getType().name());
 			return;
 		}
 

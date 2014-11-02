@@ -31,6 +31,7 @@ import io.sporkpgm.module.modules.itemremove.ItemRemoveBuilder;
 import io.sporkpgm.module.modules.maxheight.MaxHeightBuilder;
 import io.sporkpgm.module.modules.mob.MobBuilder;
 import io.sporkpgm.module.modules.timer.TimerBuilder;
+import io.sporkpgm.module.modules.tnt.TNTBuilder;
 import io.sporkpgm.objective.core.CoreBuilder;
 import io.sporkpgm.objective.monument.MonumentBuilder;
 import io.sporkpgm.objective.scored.ScoredBuilder;
@@ -343,6 +344,7 @@ public class Spork extends JavaPlugin {
 		builders.add(FriendlyFireBuilder.class);
 		builders.add(MaxHeightBuilder.class);
 		builders.add(ItemRemoveBuilder.class);
+        builders.add(TNTBuilder.class);
 	}
 
 	public Rotation getRotation() {
