@@ -1,5 +1,6 @@
 package io.sporkpgm.region.types;
 
+import io.sporkpgm.Spork;
 import io.sporkpgm.region.Region;
 import io.sporkpgm.util.RegionUtil;
 import org.bukkit.Material;
@@ -30,8 +31,9 @@ public class CylinderRegion extends Region {
 		if(!(center.isXInfinite() || center.isYInfinite() || center.isZInfinite())) {
 			this.values = RegionUtil.cylinder(center, radius, height, hollow, false);
 		} else if(center.isYInfinite() && !(center.isXInfinite() || center.isZInfinite())) {
-			this.values = RegionUtil.cylinder(new BlockRegion(center.getX() + "", "@", center.getZ() + ""), radius, 1, hollow, false);
-			this.infinite = true;
+            //Spork.get().getLogger().info("This @ method was called!");
+			this.values = RegionUtil.cylinder(new BlockRegion(center.getX() + "", center.getY() + "", center.getZ() + ""), radius, 1, hollow, false);
+            this.infinite = true;
 		}
 
 		this.center = center;
