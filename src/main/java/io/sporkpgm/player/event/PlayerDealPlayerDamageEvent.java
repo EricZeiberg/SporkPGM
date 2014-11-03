@@ -37,6 +37,8 @@ public class PlayerDealPlayerDamageEvent extends Event implements Cancellable {
 		return victim;
 	}
 
+    public SporkPlayer getPlayer() {return player; }
+
 	public HandlerList getHandlers() {
 		return handlers;
 	}

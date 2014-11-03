@@ -37,34 +37,31 @@ public class TNTBuilder extends Builder{
         double power = 20.0;
         String fuse = null;
         if (getRoot().element("tnt") != null){
-            Spork.get().getLogger().info("Detected TNTModule");
+            //Spork.get().getLogger().info("Detected TNTModule");
             Element element = getRoot().element("tnt");
             if (element.element("instantignite") != null){
                 instantIgnite = parseBoolean(element.element("instantignite").getText());
-                Spork.get().getLogger().info("II");
+                //Spork.get().getLogger().info("II");
             }
             if (element.element("blockdamage") != null){
                 blockDamage = parseBoolean(element.element("blockdamage").getText());
-                Spork.get().getLogger().info("BD");
+                //Spork.get().getLogger().info("BD");
             }
             if (element.element("yield") != null && blockDamage){
                 yield = Double.parseDouble(element.element("yield").getText());
-                Spork.get().getLogger().info("Yield " + yield);
+                //Spork.get().getLogger().info("Yield " + yield);
             }
             if (element.element("power") != null){
                 power = Double.parseDouble(element.element("power").getText());
-                Spork.get().getLogger().info("Power");
+                //Spork.get().getLogger().info("Power");
             }
             if (element.element("fuse") != null){
                 fuse = element.element("fuse").getText().replace("s", "");
-                Spork.get().getLogger().info("Fuse");
+                //Spork.get().getLogger().info("Fuse");
             }
             TNTSettings settings = new TNTSettings(instantIgnite, blockDamage, yield, power, fuse);
             TNTModule module = new TNTModule(map, settings);
             modules.add(module);
-        }
-        else {
-            Spork.get().getLogger().info("Didn't Detected TNTModule");
         }
         return modules;
     }

@@ -28,6 +28,7 @@ import io.sporkpgm.module.exceptions.ModuleLoadException;
 import io.sporkpgm.module.modules.damage.DisableDamageBuilder;
 import io.sporkpgm.module.modules.friendlyfire.FriendlyFireBuilder;
 import io.sporkpgm.module.modules.itemremove.ItemRemoveBuilder;
+import io.sporkpgm.module.modules.killreward.KillRewardBuilder;
 import io.sporkpgm.module.modules.maxheight.MaxHeightBuilder;
 import io.sporkpgm.module.modules.mob.MobBuilder;
 import io.sporkpgm.module.modules.timer.TimerBuilder;
@@ -345,6 +346,7 @@ public class Spork extends JavaPlugin {
 		builders.add(MaxHeightBuilder.class);
 		builders.add(ItemRemoveBuilder.class);
         builders.add(TNTBuilder.class);
+        builders.add(KillRewardBuilder.class);
 	}
 
 	public Rotation getRotation() {
